@@ -26,7 +26,8 @@ export async function ask(
       { role: "user", content: trimmed },
     ],
     temperature: 0.2,
-    maxTokens: 512,
+    // Reasoning models spend part of this budget thinking before they answer.
+    maxTokens: 2048,
   });
 
   return {

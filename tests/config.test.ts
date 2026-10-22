@@ -9,13 +9,13 @@ describe("loadConfig", () => {
   test("uses the default model when none is set", () => {
     expect(loadConfig({ GROQ_API_KEY: "k" })).toEqual({
       groqApiKey: "k",
-      groqModel: "llama-3.3-70b-versatile",
+      groqModel: "openai/gpt-oss-20b",
     });
   });
 
   test("respects an explicit model", () => {
-    expect(loadConfig({ GROQ_API_KEY: "k", GROQ_MODEL: "llama-3.1-8b-instant" }).groqModel).toBe(
-      "llama-3.1-8b-instant",
+    expect(loadConfig({ GROQ_API_KEY: "k", GROQ_MODEL: "openai/gpt-oss-120b" }).groqModel).toBe(
+      "openai/gpt-oss-120b",
     );
   });
 });

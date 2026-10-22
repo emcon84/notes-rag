@@ -3,7 +3,8 @@ export interface Config {
   groqModel: string;
 }
 
-const DEFAULT_GROQ_MODEL = "llama-3.3-70b-versatile";
+// Groq retires models often: check `GET /openai/v1/models` when a 404 model_not_found appears.
+const DEFAULT_GROQ_MODEL = "openai/gpt-oss-20b";
 
 export function loadConfig(env: Record<string, string | undefined> = process.env): Config {
   const groqApiKey = env.GROQ_API_KEY?.trim();

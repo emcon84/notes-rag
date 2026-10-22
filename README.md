@@ -25,7 +25,7 @@ Swapping the LLM provider means writing one new adapter. No use case changes.
 ## Stack
 
 - TypeScript on [Bun](https://bun.sh)
-- Chat model: [Groq](https://console.groq.com) (`llama-3.3-70b-versatile` by default)
+- Chat model: [Groq](https://console.groq.com) (`openai/gpt-oss-20b` by default)
 - Embeddings: [Ollama](https://ollama.com) running locally (planned)
 - Vector store: PostgreSQL with pgvector (planned)
 
@@ -52,7 +52,7 @@ Example output:
 ```
 Retrieval-augmented generation is ...
 
-— llama-3.3-70b-versatile · 48 in / 112 out tokens · 640 ms
+— openai/gpt-oss-20b · 85 in / 240 out tokens · 640 ms
 ```
 
 ## Development
